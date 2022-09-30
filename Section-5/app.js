@@ -50,6 +50,12 @@ var AccountingDepartment = /** @class */ (function (_super) {
         _this.reports = reports;
         return _this;
     }
+    AccountingDepartment.prototype.addEmployee = function (name) {
+        if (name === 'Nasief') {
+            return;
+        }
+        this.employees.push(name);
+    };
     AccountingDepartment.prototype.addReport = function (text) {
         this.reports.push(text);
     };
@@ -68,6 +74,9 @@ development.printEmployeeInformation();
 console.log(development);
 var accounting = new AccountingDepartment('A1', []);
 accounting.addReport('Something Went Wrong!');
+accounting.addEmployee('Nasief');
+accounting.addEmployee('Feisan');
 accounting.printReports();
+accounting.printEmployeeInformation();
 // const accountingCopy = { name: 'Nasief', describe: accounting.describe}
 // accountingCopy.describe()
